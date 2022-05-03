@@ -7,8 +7,8 @@ from openpyxl import load_workbook
 import sys, getopt
 import os
 import random
-
-
+import datetime
+from datetime import date
 
 
 #it reads the input file
@@ -32,15 +32,24 @@ if os.path.isfile(StudentProfile_xls):
     #his
     possessive = pronoumLocalList[2]
 
-    print (subjective)
-
-
-
     classAttended = ws['B6'].value
-    schoolYearAttended = ws['B7'].value
+
     highSchoolYearAttended = ws['B8'].value
 
-    accomplishments = 0
+
+    ###########################
+    #Time teacher know students
+    ###########################
+
+    schoolYearAttended = ws['B7'].value
+    yearsAttended = schoolYearAttended.split('/')
+    start_date = datetime.datetime(int(yearsAttended[0]), 8, 15)
+    num_months = (date.today().year - start_date.year) * 12 + (date.today().month - start_date.month)
+
+    targettedInstitution = ws['B9'].value
+
+
+
     #Column A
     colA = ws['A']
     #Column B
@@ -75,6 +84,7 @@ if os.path.isfile(StudentProfile_xls):
     ############################
     #Collecting accomplishments
     ############################
+    accomplishments = 0
     #Initial Row where data will be examined, The offset needs to be set at -1
     rowOffSet = 20 - 1
     #Last Row where data will be examined
@@ -148,11 +158,19 @@ else:
 print("To whom it may concern, \n\r")
 
 _space = " "
-                #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
-Paragraph_one = (random.choice(Phrase1) + firstName + _space + lastName + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "
-+ firstName + " was my student as a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended)
 
-print(Paragraph_one)
+################
+#1st Paragraph
+################
+                #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
+print (random.choice(Phrase1) + firstName + _space + lastName + " to the  " + targettedInstitution + _space + purposeOfTheLetter + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "
++ firstName + " was my student as a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ".")
+if(num_months < 12) : print("Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, I already can see " +
+possessive.lower())
+if(num_months > 12 and num_months < 24) : print("I have known " + firstName + _space + "for over an year, ")
+if(num_months > 24) : print("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, ")
+
+
 
 
 
