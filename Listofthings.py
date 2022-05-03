@@ -3,12 +3,12 @@ teacherName = 'Natalia Fernandes Rossi'
 
 
 PronoumsList = {
-"he": "he","him","his","his"
-"she":"she", "her","hers","hers"
-"they":"they", "them", "their", "theirs"
+"he":["he","him","his","his"],
+"she":["she","her","hers","hers"],
+"they":["they","them", "their", "theirs"]
 }
 
-LetterPurpose {
+LetterPurpose = {
 "1": "Summer Program",
 "2": "University Application",
 "3": "College Application",
@@ -23,7 +23,7 @@ ClassSubjectAttended = {
 "4": "Other (Type)"
 }
 
-SchoolYearAttended {
+SchoolYearAttended = {
 "1": "2018/2019",
 "2": "2019/2020",
 "3": "2020/2021",
@@ -31,21 +31,21 @@ SchoolYearAttended {
 "5": "Other (Type)"
 }
 
-HighSchoolYearAttended {
+HighSchoolYearAttended = {
 "1": "freshman",
 "2": "sophomore",
 "3": "junior",
 "4": "senior",
 }
 
-StudentAccomplishments {
+StudentAccomplishments = {
 "1": "student on the year",
 "2": "One of the Top Students in my class",
 "3": "None",
 "4": "Other (Type)"
 }
 
-PositivePersonalityTraits {
+PositivePersonalityTraits = {
 "": "altruistic",
 "": "assertive",
 "": "amiable",
@@ -83,7 +83,7 @@ PositivePersonalityTraits {
 "": "Other (Type)"
 }
 
-AcademicSkills {
+AcademicSkills = {
 
 "": "academic integrity",
 "": "academic brilliant",
@@ -104,7 +104,7 @@ AcademicSkills {
 
 
 #Ramdom Lists
-Phrase1 {
+Phrase1 = {
 "It is with pleasure that I recommend ",
 "It is my pleasure to recommend",
 "It is my honor to recommend",
@@ -113,20 +113,20 @@ Phrase1 {
 "It is with great pleasure that I recommend ",
 }
 
-Phrase2 {
+Phrase2 = {
 "I was fortunate to have",
 "I had the pleasure of having",
 "I was delighted to have",
 "I had the pleasure of teaching",
 }
 
-Phrase3 {
+Phrase3 = {
 "I want to explain why",
 "I want to highlight why",
 "I hope to help you learn a little more about why",
 }
 
-Phrase4 {
+Phrase4 = {
 
 "should be a valuable asset to",
 "should be considered to",
