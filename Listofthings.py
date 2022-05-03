@@ -3,9 +3,9 @@ teacherName = 'Natalia Fernandes Rossi'
 
 
 PronoumsList = {
-"he":["he","him","his","his"],
-"she":["she","her","hers","hers"],
-"they":["they","them", "their", "theirs"]
+"he":["He","Him","His"],
+"she":["She","Her","Hers"],
+"they":["They","Them","Theirs"]
 }
 
 LetterPurpose = {
@@ -46,89 +46,93 @@ StudentAccomplishments = {
 }
 
 PositivePersonalityTraits = {
-"": "altruistic",
-"": "assertive",
-"": "amiable",
-"": "articulate",
-"": "brilliant",
-"": "bright",
-"": "disciplined",
-"": "dependable",
-"": "determined",
-"": "enthusiastic",
-"": "flexible",
-"": "focused",
-"": "generous",
-"": "honest",
-"": "helpful",
-"": "intuitive",
-"": "kind",
-"": "logical",
-"": "mature",
-"": "maticulous",
-"": "outspoken",
-"": "open",
-"": "resourceful",
-"": "respectful",
-"": "responsible",
-"": "perfectionist",
-"": "positive",
-"": "self-aware",
-"": "sucint",
-"": "secure",
-"": "sympathetic",
-"": "spontaneous",
-"": "sweet",
-"": "thorough",
-"": "Other (Type)"
+"altruistic":"dedicates a lof of time helping others ",
+"assertive":"is always very confident and self-assure when answering questions ",
+"amiable":"is always friendly and pleasant with me and the other students ",
+"articulate":"frequently demonstrates the ability to speak fluently and coherently ",
+"brilliant":"is exceptionally clever and talented, always striving for the best results ",
+"bright":"usually is very quick at learning new concepts and ideas ", 
+"disciplined":"dedicates a lot of time to study, always aiming to achieve good grades and be in the top of the class ",
+"dependable":"",
+"determined":"",
+"enthusiastic":"",
+"flexible":"",
+"focused":"",
+"generous":"",
+"honest":"",
+"helpful":"",
+"intuitive":"",
+"kind":"",
+"logical":"",
+"mature":"",
+"maticulous":"",
+"outspoken":"",
+"open":"",
+"resourceful":"",
+"respectful":"",
+"responsible":"",
+"perfectionist":"",
+"positive":"",
+"self-aware":"",
+"sucint":"",
+"secure":"",
+"sympathetic":"",
+"spontaneous":"",
+"sweet":"",
+"thorough":"",
 }
 
 AcademicSkills = {
 
-"": "academic integrity",
-"": "academic brilliant",
-"": "disciplined work habits",
-"": "participation",
-"": "problem-solving skills",
-"": "self-motivated",
-"": "teamwork",
-"": "leadership skills",
-"": "adaptability to new environment",
-"": "hard-working",
-"": "creative",
-"": "logical thinking",
-"": "great presentation skills",
-"": "high achiever",
-"": "Other (Type)"
+"academic integrity":"",
+"academic brilliant":"",
+"disciplined work habits":"",
+"participation":"",
+"problem-solving skills":"",
+"self-motivated":"",
+"teamwork":"",
+"leadership skills":"",
+"adaptability to new environment":"",
+"hard-working":"",
+"creative":"",
+"logical thinking":"",
+"great presentation skills":"",
+"high achiever":"",
 }
 
 
 #Ramdom Lists
-Phrase1 = {
+##############
+#Paragraph 1
+##############
+Phrase1 = [
 "It is with pleasure that I recommend ",
-"It is my pleasure to recommend",
-"It is my honor to recommend",
-"I am very happy to recommend",
-"I am writing this letter to recommend",
+"It is my pleasure to recommend ",
+"It is my honor to recommend ",
+"I am very happy to recommend ",
+"I am writing this letter to recommend ",
 "It is with great pleasure that I recommend ",
-}
+]
 
-Phrase2 = {
+Phrase2 = [
 "I was fortunate to have",
 "I had the pleasure of having",
-"I was delighted to have",
-"I had the pleasure of teaching",
-}
+"I was lucky to have",
+]
 
-Phrase3 = {
+Phrase3 = [
 "I want to explain why",
 "I want to highlight why",
 "I hope to help you learn a little more about why",
-}
+]
 
-Phrase4 = {
-
+Phrase4 = [
 "should be a valuable asset to",
 "should be considered to",
 "is well-deserving of attending to",
-}
+]
+
+Phrase5 = [
+"made an impression in me with ",
+""
+]

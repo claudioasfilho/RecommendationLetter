@@ -1,10 +1,15 @@
-
 import Listofthings
+
+from Listofthings import PronoumsList, Phrase1, Phrase2
 import openpyxl
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import sys, getopt
 import os
+import random
+
+
+
 
 #it reads the input file
 StudentProfile_xls = "StudentProfile.xlsx"
@@ -19,6 +24,18 @@ if os.path.isfile(StudentProfile_xls):
     firstName = ws['B3'].value
     lastName = ws['B4'].value
     pronoum = ws['B5'].value
+    pronoumLocalList = PronoumsList.get(pronoum)
+    #he
+    subjective = pronoumLocalList[0]
+    #him
+    objective = pronoumLocalList[1]
+    #his
+    possessive = pronoumLocalList[2]
+
+    print (subjective)
+
+
+
     classAttended = ws['B6'].value
     schoolYearAttended = ws['B7'].value
     highSchoolYearAttended = ws['B8'].value
@@ -54,27 +71,6 @@ if os.path.isfile(StudentProfile_xls):
             break
         rowCounter = rowCounter + 1
 
-    # while dataAvailable == 0:
-    #     if dataAvailable == 0 and ws['B12'].value == 'X':
-    #         purposeOfTheLetter = ws['A12'].value
-    #         dataAvailable = 1
-    #         break
-    #     if dataAvailable == 0 and ws['B13'].value == 'X':
-    #         purposeOfTheLetter = ws['A13'].value
-    #         dataAvailable = 1
-    #         break
-    #     if dataAvailable == 0 and ws['B14'].value == 'X':
-    #         purposeOfTheLetter = ws['A14'].value
-    #         dataAvailable = 1
-    #         break
-    #     if dataAvailable == 0 and ws['B15'].value == 'X':
-    #         purposeOfTheLetter = ws['A15'].value
-    #         dataAvailable = 1
-    #     if dataAvailable == 0 and ws['B16'].value == 'X':
-    #         purposeOfTheLetter = ws['A16'].value
-    #         dataAvailable = 1
-    #         break
-    #end of Collecting purposeOfTheLetter
 
     ############################
     #Collecting accomplishments
@@ -144,20 +140,29 @@ if os.path.isfile(StudentProfile_xls):
             skillCounter = skillCounter + 1
         rowCounter = rowCounter + 1
 
-
-
-
 else:
     print("{0} does not appear to be a valid file, choose the right file and retry".format(inputfile))
     sys.exit(2)
 
-print(firstName)
-print(lastName)
 
-print(purposeOfTheLetter)
+print("To whom it may concern, \n\r")
 
-print(accomplishments)
+_space = " "
+                #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
+Paragraph_one = (random.choice(Phrase1) + firstName + _space + lastName + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "
++ firstName + " was my student as a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended)
 
-print(positivePersonalityTraits)
+print(Paragraph_one)
 
-print(academicSkills)
+
+
+#print(firstName)
+#print(lastName)
+
+#print(purposeOfTheLetter)
+
+#print(accomplishments)
+
+#print(positivePersonalityTraits)
+
+#print(academicSkills)
