@@ -163,13 +163,15 @@ _space = " "
 #1st Paragraph
 ################
                 #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
-print (random.choice(Phrase1) + firstName + _space + lastName + " to the  " + targettedInstitution + _space + purposeOfTheLetter + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "
-+ firstName + " was my student as a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ".")
-if(num_months < 12) : print("Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, I already can see " +
-possessive.lower())
-if(num_months > 12 and num_months < 24) : print("I have known " + firstName + _space + "for over an year, ")
-if(num_months > 24) : print("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, ")
+print (random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " +
+random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a student as a "
++ highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ".", end="", flush=True)
 
+if(num_months < 12) : print( "Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, but I already can see ", end="", flush=True)
+if(num_months > 12 and num_months < 24) : print("I have known " + firstName + _space + "for over an year, and " + subjective.lower() + " made an impression in me due to ", end="", flush=True)
+if(num_months > 24) : print("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ", end="", flush=True)
+
+print(possessive.lower() + _space + positivePersonalityTraits[0] + _space + "and also " + positivePersonalityTraits[1] + " personality.", end="", flush=True)
 
 
 

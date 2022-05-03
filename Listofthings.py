@@ -131,8 +131,3 @@ Phrase4 = [
 "should be considered to",
 "is well-deserving of attending to",
 ]
-
-Phrase5 = [
-"made an impression in me with ",
-""
-]
