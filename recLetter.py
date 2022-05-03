@@ -1,6 +1,6 @@
 import Listofthings
 
-from Listofthings import PronoumsList,PositivePersonalityTraits,AcademicSkills, Phrase1, Phrase2, Phrase3, Phrase4
+from Listofthings import PronoumsList,PositivePersonalityTraits,AcademicSkills, Phrase1, Phrase2, Phrase3, Phrase4, Phrase5, LinkingWords
 import openpyxl
 from openpyxl import Workbook
 from openpyxl import load_workbook
@@ -175,7 +175,7 @@ if(num_months > 12 and num_months < 24) : print("I have known " + firstName + _s
 if(num_months > 24) : print("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ", end="", flush=True)
 
 #print(possessive.lower() + _space + positivePersonalityTraits[0] + _space + "and also " + positivePersonalityTraits[1] + " personality.", end="", flush=True)
-print(possessive.lower() + _space + random.choice(positivePersonalityTraits) + _space + "and also " + random.choice(positivePersonalityTraits) + " personality. ", end="", flush=True)
+print(possessive.lower() + _space + random.choice(academicSkills) + _space + "and also " + random.choice(positivePersonalityTraits) + " personality. ", end="", flush=True)
 
 #"I want to illustrate a little more about ",         #Him/Her
 print(random.choice(Phrase3) +  objective.lower() + " in this letter, and why " + subjective.lower() +  " deserves to be considered in your instituition.")
@@ -186,6 +186,25 @@ print("\n\r\n\r")
 #2nd Paragraph
 ################
 
+ACSkills1 = random.choice(academicSkills)
+academicSkills.remove(ACSkills1)
+ACSkills2 = random.choice(academicSkills)
+academicSkills.remove(ACSkills2)
+ACSkills3 = random.choice(academicSkills)
+academicSkills.remove(ACSkills3)
+ACSkills4 = random.choice(academicSkills)
+academicSkills.remove(ACSkills4)
+ACSkills5 = random.choice(academicSkills)
+academicSkills.remove(ACSkills5)
+ACSkills6 = random.choice(academicSkills)
+academicSkills.remove(ACSkills6)
+
+
+
+print("While in class I have observed some remarkable academic skills. " + firstName + _space + AcademicSkills[ACSkills1] + ". " + subjective  + " also " + AcademicSkills[ACSkills2]
++ random.choice(Phrase5) + subjective.lower() + _space + AcademicSkills[ACSkills3]+ random.choice(LinkingWords) + subjective.lower() + _space  + AcademicSkills[ACSkills4] + ".")
+
+print("\n\r\n\r")
 #print(firstName)
 #print(lastName)
 
