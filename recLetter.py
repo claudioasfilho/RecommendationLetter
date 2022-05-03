@@ -21,6 +21,7 @@ if os.path.isfile(StudentProfile_xls):
     sheets = wb.sheetnames
     ws= wb[sheets[0]]
 
+    teachersName = ws['B2'].value
     firstName = ws['B3'].value
     lastName = ws['B4'].value
     pronoum = ws['B5'].value
@@ -154,7 +155,34 @@ else:
     print("{0} does not appear to be a valid file, choose the right file and retry".format(inputfile))
     sys.exit(2)
 
+#Ramdomizing Academic Skills and Positive traits
 
+acadSkill1 = random.choice(academicSkills)
+academicSkills.remove(acadSkill1)
+acadSkill2 = random.choice(academicSkills)
+academicSkills.remove(acadSkill2)
+acadSkill3 = random.choice(academicSkills)
+academicSkills.remove(acadSkill3)
+acadSkill4 = random.choice(academicSkills)
+academicSkills.remove(acadSkill4)
+acadSkill5 = random.choice(academicSkills)
+academicSkills.remove(acadSkill5)
+acadSkill6 = random.choice(academicSkills)
+academicSkills.remove(acadSkill6)
+
+
+personalTrait1 = random.choice(positivePersonalityTraits)
+positivePersonalityTraits.remove(personalTrait1)
+personalTrait2 = random.choice(positivePersonalityTraits)
+positivePersonalityTraits.remove(personalTrait2)
+personalTrait3 = random.choice(positivePersonalityTraits)
+positivePersonalityTraits.remove(personalTrait3)
+personalTrait4 = random.choice(positivePersonalityTraits)
+positivePersonalityTraits.remove(personalTrait4)
+personalTrait5 = random.choice(positivePersonalityTraits)
+positivePersonalityTraits.remove(personalTrait5)
+personalTrait6 = random.choice(positivePersonalityTraits)
+positivePersonalityTraits.remove(personalTrait6)
 
 
 _space = " "
@@ -175,7 +203,7 @@ if(num_months > 12 and num_months < 24) : print("I have known " + firstName + _s
 if(num_months > 24) : print("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ", end="", flush=True)
 
 #print(possessive.lower() + _space + positivePersonalityTraits[0] + _space + "and also " + positivePersonalityTraits[1] + " personality.", end="", flush=True)
-print(possessive.lower() + _space + random.choice(academicSkills) + _space + "and also " + random.choice(positivePersonalityTraits) + " personality. ", end="", flush=True)
+print(objective.lower() + _space + acadSkill6 + _space + "and also " + personalTrait6 + " personality. ", end="", flush=True)
 
 #"I want to illustrate a little more about ",         #Him/Her
 print(random.choice(Phrase3) +  objective.lower() + " in this letter, and why " + subjective.lower() +  " deserves to be considered in your instituition.")
@@ -186,32 +214,29 @@ print("\n\r\n\r")
 #2nd Paragraph
 ################
 
-ACSkills1 = random.choice(academicSkills)
-academicSkills.remove(ACSkills1)
-ACSkills2 = random.choice(academicSkills)
-academicSkills.remove(ACSkills2)
-ACSkills3 = random.choice(academicSkills)
-academicSkills.remove(ACSkills3)
-ACSkills4 = random.choice(academicSkills)
-academicSkills.remove(ACSkills4)
-ACSkills5 = random.choice(academicSkills)
-academicSkills.remove(ACSkills5)
-ACSkills6 = random.choice(academicSkills)
-academicSkills.remove(ACSkills6)
 
 
-
-print("While in class I have observed some remarkable academic skills. " + firstName + _space + AcademicSkills[ACSkills1] + ". " + subjective  + " also " + AcademicSkills[ACSkills2]
-+ random.choice(Phrase5) + subjective.lower() + _space + AcademicSkills[ACSkills3]+ random.choice(LinkingWords) + subjective.lower() + _space  + AcademicSkills[ACSkills4] + ".")
+print("While in class I have observed some remarkable academic skills. " + firstName + _space + AcademicSkills[acadSkill1] + ". " + subjective  + " also " + AcademicSkills[acadSkill2]
++ random.choice(Phrase5) + subjective.lower() + _space + AcademicSkills[acadSkill3]+ random.choice(LinkingWords) + subjective.lower() + _space  + AcademicSkills[acadSkill4] + ".")
 
 print("\n\r\n\r")
-#print(firstName)
-#print(lastName)
 
-#print(purposeOfTheLetter)
 
-#print(accomplishments)
+################
+#3rd Paragraph
+################
 
-#print(positivePersonalityTraits)
 
-#print(academicSkills)
+
+print("Besides all " + possessive.lower() + " Academic work," + firstName + _space + "is a very "+ personalTrait5 + " student. " + subjective + _space +  PositivePersonalityTraits[personalTrait1] + ". " + subjective  + " also " + PositivePersonalityTraits[personalTrait2]
++ random.choice(Phrase5) + subjective.lower() + _space + PositivePersonalityTraits[personalTrait3]+ random.choice(LinkingWords) + subjective.lower() + _space  + PositivePersonalityTraits[personalTrait4] + ".")
+
+print("\n\r\n\r")
+
+print("Please, contact me if you have any questions.\n\r")
+print("Sincerely,\n\r")
+
+print(teachersName)
+#print(str(date.today().month) + str(date.today().day) + str(date.today().year))
+print(str(date.today().month) + "/" + str(date.today().day) + "/" + str(date.today().year))
+print("\n\r\n\r")

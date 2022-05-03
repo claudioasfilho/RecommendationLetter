@@ -4,7 +4,7 @@ teacherName = 'Natalia Fernandes Rossi'
 
 PronoumsList = {
 "he":["He","Him","His"],
-"she":["She","Her","Hers"],
+"she":["She","Her","Her"],
 "they":["They","Them","Theirs"]
 }
 
@@ -46,21 +46,21 @@ StudentAccomplishments = {
 }
 
 PositivePersonalityTraits = {
-"altruistic":"dedicates a lof of time helping others ",
-"assertive":"is always very confident and self-assure when answering questions ",
-"amiable":"is always friendly and pleasant with me and the other students ",
-"articulate":"frequently demonstrates the ability to speak fluently and coherently ",
-"brilliant":"is exceptionally clever and talented, always striving for the best results ",
-"bright":"usually is very quick at learning new concepts and ideas ",
-"disciplined":"dedicates a lot of time to study, always aiming to achieve good grades and be in the top of the class ",
-"dependable":"usually delivers homework and assignments in time, very deserving of trust ",
-"determined":"usually shows determination to get things done not allowing any difficulties get in the way ",
-"enthusiastic":"shows intense interest for our class activities and concepts that we learn in class ",
-"flexible":"reacts well to set backs and is able to adapt to new situations quickly ",
-"focused":"gives full attention during lectures and class activities, avoiding distractions ",
-"generous":"shares knowledge with other students and makes sure classmates are participating and learning the material as well ",
-"honest":"admits own actions and share sincere opinions and ideas without being hurtful ",
-"helpful":"make sure other students are also participating in activities and help to organize the classroom ",
+"altruistic":"dedicates a lof of time helping others",
+"assertive":"is always very confident and self-assure when answering questions",
+"amiable":"is always friendly and pleasant with me and the other students",
+"articulate":"frequently demonstrates the ability to speak fluently and coherently",
+"brilliant":"is exceptionally clever and talented, always striving for the best results",
+"bright":"usually is very quick at learning new concepts and ideas",
+"disciplined":"dedicates a lot of time to study, always aiming to achieve good grades and be in the top of the class",
+"dependable":"usually delivers homework and assignments in time, very deserving of trust",
+"determined":"usually shows determination to get things done not allowing any difficulties get in the way",
+"enthusiastic":"shows intense interest for our class activities and concepts that we learn in class",
+"flexible":"reacts well to set backs and is able to adapt to new situations quickly",
+"focused":"gives full attention during lectures and class activities, avoiding distractions",
+"generous":"shares knowledge with other students and makes sure classmates are participating and learning the material as well",
+"honest":"admits own actions and share sincere opinions and ideas without being hurtful",
+"helpful":"make sure other students are also participating in activities and help to organize the classroom",
 "intuitive":"",
 "kind":"",
 "logical":"",
@@ -94,7 +94,7 @@ AcademicSkills = {
 "leadership skills":"is very goal oriented, likes to serve others and take the lead into projects or stepping-up as a team leader while in class",
 "adaptability to new environment":"even in the face of adversity, is highly adaptable to the new environment, demonstrating a lot of flexibility and ability to cope with change with grace",
 "hard-working":"is very diligent in laboring and puts a lot of effort into doing and completing tasks, including homework, projects, and participating in class activities",
-"creative":"has the abilities to solve problems or tasks in a creative way, by means of generating many original ideas, carrying distictive cognitive traits and nonconformist behavior",
+"creative":"has the ability to solve problems or tasks in a creative way, by means of generating many original ideas, carrying distictive cognitive traits and nonconformist behavior",
 "logical thinking":"constantly demonstrates having the ability to use various concepts with their meanings, to make inferences by making suggestions and to make reasoning by focusing on problem solving based on logical thinking",
 "great presentation skills":"has the ability to deliver information to different kinds of audiences in an effective and engaging manner",
 "high achiever":"gets high marks and good grades. Usually goes beyond the work that is required and does it very well. Usually the work is well-organized, neat and delivered on time",
