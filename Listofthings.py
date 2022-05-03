@@ -55,12 +55,12 @@ PositivePersonalityTraits = {
 "disciplined":"dedicates a lot of time to study, always aiming to achieve good grades and be in the top of the class ",
 "dependable":"usually delivers homework and assignments in time, very deserving of trust ",
 "determined":"usually shows determination to get things done not allowing any difficulties get in the way ",
-"enthusiastic":"",
-"flexible":"",
-"focused":"",
-"generous":"",
-"honest":"",
-"helpful":"",
+"enthusiastic":"shows intense interest for our class activities and concepts that we learn in class ",
+"flexible":"reacts well to set backs and is able to adapt to new situations quickly ",
+"focused":"gives full attention during lectures and class activities, avoiding distractions ",
+"generous":"shares knowledge with other students and makes sure classmates are participating and learning the material as well ",
+"honest":"admits own actions and share sincere opinions and ideas without being hurtful ",
+"helpful":"make sure other students are also participating in activities and help to organize the classroom ",
 "intuitive":"",
 "kind":"",
 "logical":"",
@@ -84,14 +84,14 @@ PositivePersonalityTraits = {
 
 AcademicSkills = {
 
-"academic integrity":"",
-"academic brilliant":"",
-"disciplined work habits":"",
-"participation":"",
-"problem-solving skills":"",
-"self-motivated":"",
-"teamwork":"",
-"leadership skills":"",
+"academic integrity":"puts a lot of commitment, even in the face of adversity, to honesty, trust, fairness, respect, responsibility, and courage ",
+"academic brilliant":"is exceptionally clever and talented, always striving for the best results ",
+"disciplined work habits":"dedicates a lot of time to study, always aiming to achieve good grades and be in the top of the class ",
+"participation":"participates in all individual and group activities and discussions ",
+"problem-solving skills":"has the the ability to handle difficult or unexpected situations, finding more than one solution to a problem",
+"self-motivated":"is motivated to get things done, always presenting a lot of enthusiasm and interest on studies or projects without needing pressure ",
+"teamwork":"is a a person who strives to do the best for the team, always at ease while working with other students, co-operating with them, whenever leading or taking instructions from others ",
+"leadership skills":"is very goal oriented, likes to serve others and take the lead into projects or stepping-up as a team leader while in class",
 "adaptability to new environment":"",
 "hard-working":"",
 "creative":"",
@@ -121,9 +121,10 @@ Phrase2 = [
 ]
 
 Phrase3 = [
-"I want to explain why",
-"I want to highlight why",
-"I hope to help you learn a little more about why",
+"Hopefuly I will be able to illustrate a little more about ",
+"I hope to illustrate a little more about ",
+"I hope to highlight a little more about ",
+"I hope to help you learn a little more about ",
 ]
 
 Phrase4 = [

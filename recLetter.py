@@ -1,6 +1,6 @@
 import Listofthings
 
-from Listofthings import PronoumsList, Phrase1, Phrase2
+from Listofthings import PronoumsList,PositivePersonalityTraits,AcademicSkills, Phrase1, Phrase2, Phrase3, Phrase4
 import openpyxl
 from openpyxl import Workbook
 from openpyxl import load_workbook
@@ -155,26 +155,36 @@ else:
     sys.exit(2)
 
 
-print("To whom it may concern, \n\r")
+
 
 _space = " "
 
 ################
 #1st Paragraph
 ################
+
+print("\n\rTo whom it may concern, \n\r\n\r")
+
                 #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
 print (random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " +
-random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a student as a "
-+ highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ".", end="", flush=True)
+random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a "
++ highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ", end="", flush=True)
 
-if(num_months < 12) : print( "Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, but I already can see ", end="", flush=True)
+if(num_months < 12) : print( "Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, I can already see ", end="", flush=True)
 if(num_months > 12 and num_months < 24) : print("I have known " + firstName + _space + "for over an year, and " + subjective.lower() + " made an impression in me due to ", end="", flush=True)
 if(num_months > 24) : print("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ", end="", flush=True)
 
-print(possessive.lower() + _space + positivePersonalityTraits[0] + _space + "and also " + positivePersonalityTraits[1] + " personality.", end="", flush=True)
+#print(possessive.lower() + _space + positivePersonalityTraits[0] + _space + "and also " + positivePersonalityTraits[1] + " personality.", end="", flush=True)
+print(possessive.lower() + _space + random.choice(positivePersonalityTraits) + _space + "and also " + random.choice(positivePersonalityTraits) + " personality. ", end="", flush=True)
 
+#"I want to illustrate a little more about ",         #Him/Her
+print(random.choice(Phrase3) +  objective.lower() + " in this letter, and why " + subjective.lower() +  " deserves to be considered in your instituition.")
 
+print("\n\r\n\r")
 
+################
+#2nd Paragraph
+################
 
 #print(firstName)
 #print(lastName)
