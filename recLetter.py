@@ -9,7 +9,12 @@ import os
 import random
 import datetime
 from datetime import date
+import docx
+from docx.shared import Length,Inches, Pt
 
+doc = docx.Document('Template.docx')
+
+all_paras = doc.paragraphs
 
 #it reads the input file
 StudentProfile_xls = "StudentProfile.xlsx"
@@ -187,28 +192,35 @@ positivePersonalityTraits.remove(personalTrait6)
 
 _space = " "
 
+# style = doc.styles.add_style('Indent', WD_STYLE_TYPE.PARAGRAPH)
+# paragraph_format = style.paragraph_format
+# # paragraph_format.left_indent = Inches(0.25)
+# # paragraph_format.first_line_indent = Inches(-0.25)
+# paragraph_format.line_spacing_rule = Pt(10)
+
 ################
 #1st Paragraph
 ################
 
-print("\n\rTo whom it may concern, \n\r\n\r")
+doc.add_paragraph("To whom it may concern,\n")
 
                 #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
-print (random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " +
+_1st_paragrapth = doc.add_paragraph (random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " +
 random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a "
-+ highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ", end="", flush=True)
++ highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ")
 
-if(num_months < 12) : print( "Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, I can already see ", end="", flush=True)
-if(num_months > 12 and num_months < 24) : print("I have known " + firstName + _space + "for over an year, and " + subjective.lower() + " made an impression in me due to ", end="", flush=True)
-if(num_months > 24) : print("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ", end="", flush=True)
+if(num_months < 12) : _1st_paragrapth.add_run( "Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, I can already see ")
+if(num_months > 12 and num_months < 24) : _1st_paragrapth.add_run("I have known " + firstName + _space + "for over an year, and " + subjective.lower() + " made an impression in me due to ")
+if(num_months > 24) : _1st_paragrapth.add_run("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ")
 
 #print(possessive.lower() + _space + positivePersonalityTraits[0] + _space + "and also " + positivePersonalityTraits[1] + " personality.", end="", flush=True)
-print(objective.lower() + _space + acadSkill6 + _space + "and also " + personalTrait6 + " personality. ", end="", flush=True)
+_1st_paragrapth.add_run(objective.lower() + _space + acadSkill6 + _space + "and also " + personalTrait6 + " personality. ",)
 
 #"I want to illustrate a little more about ",         #Him/Her
-print(random.choice(Phrase3) +  objective.lower() + " in this letter, and why " + subjective.lower() +  " deserves to be considered in your instituition.")
+_1st_paragrapth.add_run(random.choice(Phrase3) +  objective.lower() + " in this letter, and why " + subjective.lower() +  " deserves to be considered in your instituition.")
 
-print("\n\r\n\r")
+
+doc.add_paragraph("\n")
 
 ################
 #2nd Paragraph
@@ -216,10 +228,10 @@ print("\n\r\n\r")
 
 
 
-print("While in class I have observed some remarkable academic skills. " + firstName + _space + AcademicSkills[acadSkill1] + ". " + subjective  + " also " + AcademicSkills[acadSkill2]
+doc.add_paragraph("While in class I have observed some remarkable academic skills. " + firstName + _space + AcademicSkills[acadSkill1] + ". " + subjective  + " also " + AcademicSkills[acadSkill2]
 + random.choice(Phrase5) + subjective.lower() + _space + AcademicSkills[acadSkill3]+ random.choice(LinkingWords) + subjective.lower() + _space  + AcademicSkills[acadSkill4] + ".")
 
-print("\n\r\n\r")
+doc.add_paragraph("\n")
 
 
 ################
@@ -228,15 +240,16 @@ print("\n\r\n\r")
 
 
 
-print("Besides all " + possessive.lower() + " Academic work," + firstName + _space + "is a very "+ personalTrait5 + " student. " + subjective + _space +  PositivePersonalityTraits[personalTrait1] + ". " + subjective  + " also " + PositivePersonalityTraits[personalTrait2]
+doc.add_paragraph("Besides all " + possessive.lower() + " Academic work, " + firstName + _space + "is a very "+ personalTrait5 + " student. " + subjective + _space +  PositivePersonalityTraits[personalTrait1] + ". " + subjective  + " also " + PositivePersonalityTraits[personalTrait2]
 + random.choice(Phrase5) + subjective.lower() + _space + PositivePersonalityTraits[personalTrait3]+ random.choice(LinkingWords) + subjective.lower() + _space  + PositivePersonalityTraits[personalTrait4] + ".")
 
-print("\n\r\n\r")
+doc.add_paragraph("\n")
 
-print("Please, contact me if you have any questions.\n\r")
-print("Sincerely,\n\r")
+lastParagraph = doc.add_paragraph("Please, contact me if you have any questions.\n")
+lastParagraph.add_run("Sincerely,\n\n")
 
-print(teachersName)
-#print(str(date.today().month) + str(date.today().day) + str(date.today().year))
-print(str(date.today().month) + "/" + str(date.today().day) + "/" + str(date.today().year))
-print("\n\r\n\r")
+lastParagraph.add_run(teachersName + "\n")
+lastParagraph.add_run(str(date.today().month) + "/" + str(date.today().day) + "/" + str(date.today().year))
+
+
+doc.save(firstName + lastName + ".docx")
