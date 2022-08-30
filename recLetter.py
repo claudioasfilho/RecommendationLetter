@@ -204,11 +204,12 @@ _space = " "
 
 doc.add_paragraph("To whom it may concern,\n")
 
-                #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
-_1st_paragrapth = doc.add_paragraph (random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " +
-random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a "
-+ highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ")
+#print(random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space)
 
+#_1st_P = str(random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ")
+                #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
+_1st_paragrapth = doc.add_paragraph (random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ")
+#_1st_paragrapth = doc.add_paragraph (_1st_P)
 if(num_months < 12) : _1st_paragrapth.add_run( "Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, I can already see ")
 if(num_months > 12 and num_months < 24) : _1st_paragrapth.add_run("I have known " + firstName + _space + "for over an year, and " + subjective.lower() + " made an impression in me due to ")
 if(num_months > 24) : _1st_paragrapth.add_run("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ")
@@ -251,5 +252,7 @@ lastParagraph.add_run("Sincerely,\n\n")
 lastParagraph.add_run(teachersName + "\n")
 lastParagraph.add_run(str(date.today().month) + "/" + str(date.today().day) + "/" + str(date.today().year))
 
+file_name = (firstName + lastName + "-" + str(date.today().month) + "-" + str(date.today().day) + "-" + str(date.today().year) + ".docx")
+doc.save(file_name)
 
-doc.save(firstName + lastName + ".docx")
+print(file_name + " created sucessfully")
