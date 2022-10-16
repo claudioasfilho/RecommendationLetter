@@ -54,6 +54,10 @@ if os.path.isfile(StudentProfile_xls):
 
     targettedInstitution = ws['B9'].value
 
+    if targettedInstitution == " ":
+         targettedInstitution = "your"
+    else :
+        targettedInstitution = "the " + ws['B9'].value
 
 
     #Column A
@@ -162,32 +166,57 @@ else:
 
 #Ramdomizing Academic Skills and Positive traits
 
+
+academicSkillsFinal = []
+
 acadSkill1 = random.choice(academicSkills)
 academicSkills.remove(acadSkill1)
+academicSkillsFinal.append(acadSkill1)
 acadSkill2 = random.choice(academicSkills)
 academicSkills.remove(acadSkill2)
+academicSkillsFinal.append(acadSkill2)
 acadSkill3 = random.choice(academicSkills)
 academicSkills.remove(acadSkill3)
-acadSkill4 = random.choice(academicSkills)
-academicSkills.remove(acadSkill4)
-acadSkill5 = random.choice(academicSkills)
-academicSkills.remove(acadSkill5)
-acadSkill6 = random.choice(academicSkills)
-academicSkills.remove(acadSkill6)
+academicSkillsFinal.append(acadSkill3)
+
+if skillCounter>3:
+    acadSkill4 = random.choice(academicSkills)
+    academicSkills.remove(acadSkill4)
+    academicSkillsFinal.append(acadSkill4)
+    if skillCounter>4:
+        acadSkill5 = random.choice(academicSkills)
+        academicSkills.remove(acadSkill5)
+        academicSkillsFinal.append(acadSkill5)
+        if skillCounter>5:
+            acadSkill6 = random.choice(academicSkills)
+            academicSkills.remove(acadSkill6)
+            academicSkillsFinal.append(acadSkill6)
 
 
+positivePersonalityTraitFinal = []
 personalTrait1 = random.choice(positivePersonalityTraits)
 positivePersonalityTraits.remove(personalTrait1)
+positivePersonalityTraitFinal.append(personalTrait1)
 personalTrait2 = random.choice(positivePersonalityTraits)
 positivePersonalityTraits.remove(personalTrait2)
+positivePersonalityTraitFinal.append(personalTrait2)
 personalTrait3 = random.choice(positivePersonalityTraits)
 positivePersonalityTraits.remove(personalTrait3)
-personalTrait4 = random.choice(positivePersonalityTraits)
-positivePersonalityTraits.remove(personalTrait4)
-personalTrait5 = random.choice(positivePersonalityTraits)
-positivePersonalityTraits.remove(personalTrait5)
-personalTrait6 = random.choice(positivePersonalityTraits)
-positivePersonalityTraits.remove(personalTrait6)
+positivePersonalityTraitFinal.append(personalTrait3)
+
+if traitCounter>3:
+    personalTrait4 = random.choice(positivePersonalityTraits)
+    positivePersonalityTraits.remove(personalTrait4)
+    positivePersonalityTraitFinal.append(personalTrait4)
+    if traitCounter>4:
+        personalTrait5 = random.choice(positivePersonalityTraits)
+        positivePersonalityTraits.remove(personalTrait5)
+        positivePersonalityTraitFinal.append(personalTrait5)
+        if traitCounter>5:
+            personalTrait6 = random.choice(positivePersonalityTraits)
+            positivePersonalityTraits.remove(personalTrait6)
+            positivePersonalityTraitFinal.append(personalTrait6)
+
 
 
 _space = " "
@@ -208,14 +237,14 @@ doc.add_paragraph("To whom it may concern,\n")
 
 #_1st_P = str(random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ")
                 #"It is with pleasure that I recommend "                        "I was fortunate to have" "him"
-_1st_paragrapth = doc.add_paragraph (random.choice(Phrase1) + firstName + _space + lastName + " to the " + targettedInstitution + _space + purposeOfTheLetter + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ")
+_1st_paragrapth = doc.add_paragraph (random.choice(Phrase1) + firstName + _space + lastName + " to " + targettedInstitution + _space + purposeOfTheLetter + ". " + random.choice(Phrase2) + _space + objective.lower() + _space + "in my classroom. "+ firstName + " was a " + highSchoolYearAttended + " in my " + classAttended + " class in " + schoolYearAttended + ". ")
 #_1st_paragrapth = doc.add_paragraph (_1st_P)
 if(num_months < 12) : _1st_paragrapth.add_run( "Although I have only taught " + firstName + _space + "for " + str(int(num_months)) + " months, I can already see ")
 if(num_months > 12 and num_months < 24) : _1st_paragrapth.add_run("I have known " + firstName + _space + "for over an year, and " + subjective.lower() + " made an impression in me due to ")
 if(num_months > 24) : _1st_paragrapth.add_run("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ")
 
 #print(possessive.lower() + _space + positivePersonalityTraits[0] + _space + "and also " + positivePersonalityTraits[1] + " personality.", end="", flush=True)
-_1st_paragrapth.add_run(objective.lower() + _space + acadSkill6 + _space + "and also " + personalTrait6 + " personality. ",)
+_1st_paragrapth.add_run(objective.lower() + _space + random.choice(academicSkillsFinal) + _space + "and also " +  random.choice(positivePersonalityTraitFinal) + " personality. ",)
 
 #"I want to illustrate a little more about ",         #Him/Her
 _1st_paragrapth.add_run(random.choice(Phrase3) +  objective.lower() + " in this letter, and why " + subjective.lower() +  " deserves to be considered in your instituition.")
@@ -227,10 +256,21 @@ doc.add_paragraph("\n")
 #2nd Paragraph
 ################
 
+acadSkillA = random.choice(academicSkillsFinal)
+academicSkillsFinal.remove(acadSkillA)
+
+acadSkillB = random.choice(academicSkillsFinal)
+academicSkillsFinal.remove(acadSkillB)
+
+acadSkillC = random.choice(academicSkillsFinal)
+academicSkillsFinal.remove(acadSkillC)
+
+# acadSkillD = random.choice(academicSkillsFinal)
+# academicSkillsFinal.remove(acadSkillD)
 
 
-doc.add_paragraph("While in class I have observed some remarkable academic skills. " + firstName + _space + AcademicSkills[acadSkill1] + ". " + subjective  + " also " + AcademicSkills[acadSkill2]
-+ random.choice(Phrase5) + subjective.lower() + _space + AcademicSkills[acadSkill3]+ random.choice(LinkingWords) + subjective.lower() + _space  + AcademicSkills[acadSkill4] + ".")
+doc.add_paragraph("While in class I have observed some remarkable academic skills. " + firstName + _space + AcademicSkills[acadSkillA] + ". " + subjective  + " also " + AcademicSkills[acadSkillB]
++ random.choice(Phrase5) + subjective.lower() + _space + AcademicSkills[acadSkillC] + ".")#+ random.choice(LinkingWords) + subjective.lower() + _space  + AcademicSkills[acadSkillD] + ".")
 
 doc.add_paragraph("\n")
 
@@ -240,9 +280,21 @@ doc.add_paragraph("\n")
 ################
 
 
+personalTraitA = random.choice(positivePersonalityTraitFinal)
+positivePersonalityTraitFinal.remove(personalTraitA)
 
-doc.add_paragraph("Besides all " + possessive.lower() + " Academic work, " + firstName + _space + "is a very "+ personalTrait5 + " student. " + subjective + _space +  PositivePersonalityTraits[personalTrait1] + ". " + subjective  + " also " + PositivePersonalityTraits[personalTrait2]
-+ random.choice(Phrase5) + subjective.lower() + _space + PositivePersonalityTraits[personalTrait3]+ random.choice(LinkingWords) + subjective.lower() + _space  + PositivePersonalityTraits[personalTrait4] + ".")
+personalTraitB = random.choice(positivePersonalityTraitFinal)
+positivePersonalityTraitFinal.remove(personalTraitB)
+
+personalTraitC = random.choice(positivePersonalityTraitFinal)
+positivePersonalityTraitFinal.remove(personalTraitC)
+
+# personalTraitD = random.choice(positivePersonalityTraitFinal)
+# positivePersonalityTraitFinal.remove(personalTraitD)
+
+
+doc.add_paragraph("Besides all " + possessive.lower() + " Academic work, " + firstName + _space + "is a very "+ personalTraitA + " student. " + subjective + _space +  PositivePersonalityTraits[personalTraitB] + ". " + subjective  + " also " + PositivePersonalityTraits[personalTrait2]
++ random.choice(Phrase5) + subjective.lower() + _space + PositivePersonalityTraits[personalTraitC]+ ".")#+ random.choice(LinkingWords) + subjective.lower() + _space  + PositivePersonalityTraits[personalTraitD] + ".")
 
 doc.add_paragraph("\n")
 
