@@ -244,7 +244,7 @@ if(num_months > 12 and num_months < 24) : _1st_paragrapth.add_run("I have known 
 if(num_months > 24) : _1st_paragrapth.add_run("I have known " + firstName + _space + "for more than " + str(int(num_months/12)) + " years, and " + subjective.lower() + " made an impression in me due to ")
 
 #print(possessive.lower() + _space + positivePersonalityTraits[0] + _space + "and also " + positivePersonalityTraits[1] + " personality.", end="", flush=True)
-_1st_paragrapth.add_run(objective.lower() + _space + random.choice(academicSkillsFinal) + _space + "and also " +  random.choice(positivePersonalityTraitFinal) + " personality. ",)
+_1st_paragrapth.add_run(possessive.lower() + _space + random.choice(academicSkillsFinal) + _space + "and also " +  random.choice(positivePersonalityTraitFinal) + " personality. ",)
 
 #"I want to illustrate a little more about ",         #Him/Her
 _1st_paragrapth.add_run(random.choice(Phrase3) +  objective.lower() + " in this letter, and why " + subjective.lower() +  " deserves to be considered in your instituition.")
